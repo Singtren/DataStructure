@@ -18,7 +18,11 @@ private:
 	Status PreOrderTraverse(BiTree T, Status(*visit)(char  e));
 	Status InOrderTraverse(BiTree T, Status(*visit)(char e));
 	Status PostOrderTraverse(BiTree T, Status(*visit)(char  e));
-	
+	Status NestPare(BiTree T);
+	BiTNode * GetNode(BiTree T,char Value);
+	int Depth(BiTree T);
+	int Leaf(BiTree T);
+
 public:
 	BTree()
 	{
@@ -26,7 +30,11 @@ public:
 	}
 	Status CreateBiTree();
 	Status PreOrderTraverse(Status(*visit)(char  e));
-	Status InOrderTraverse( Status(*visit)(char e));
-	Status PostOrderTraverse( Status(*visit)(char  e));
-};
+	Status InOrderTraverse(Status(*visit)(char e));
+	Status PostOrderTraverse(Status(*visit)(char  e));
+	Status NestPare();
+	BiTNode * GetNode(char Value);
+	int Depth();
+	int Leaf();
 
+};
